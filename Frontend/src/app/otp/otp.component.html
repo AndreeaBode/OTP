@@ -1,0 +1,12 @@
+<div class="container">
+    <h2>OTP Validation</h2>
+    <div *ngIf="otpReceived" class="toast">
+      <p>{{ otpMessage }}</p>
+    </div>
+    <div>
+      <label for="otpInput">Enter OTP:</label>
+      <input type="text" id="otpInput" [(ngModel)]="enteredOTP" (keyup.enter)="validateOTP()">
+      <button (click)="validateOTP()">Validate</button>
+    </div>
+  </div>
+  
